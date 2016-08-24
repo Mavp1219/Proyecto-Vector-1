@@ -194,8 +194,8 @@ public class principal extends javax.swing.JFrame {
             v[i] = n;
         }
         cmdcrear.setEnabled(false);
-        cmdllenadomanual.setEnabled(true);
-        cmdllenadoautomatico.setEnabled(true);
+        cmdllenadomanual.setEnabled(false);
+        cmdllenadoautomatico.setEnabled(false);
         cmdcalcular.setEnabled(true);
         cmdborrar.setEnabled(true);
 
