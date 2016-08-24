@@ -174,6 +174,9 @@ public class principal extends javax.swing.JFrame {
             cmdllenadomanual.setEnabled(true);
             cmdllenadoautomatico.setEnabled(true);
             cmdborrar.setEnabled(true);
+            txtlongitud.setEnabled(false);
+            cmdcalcular.setEnabled(true);
+            
         }
 
 
@@ -198,6 +201,7 @@ public class principal extends javax.swing.JFrame {
         cmdllenadoautomatico.setEnabled(false);
         cmdcalcular.setEnabled(true);
         cmdborrar.setEnabled(true);
+        txtlongitud.setEditable(false);
 
 
     }//GEN-LAST:event_cmdllenadomanualActionPerformed
@@ -216,6 +220,7 @@ public class principal extends javax.swing.JFrame {
         cmdllenadoautomatico.setEnabled(false);
         cmdcalcular.setEnabled(true);
         cmdborrar.setEnabled(true);
+        txtlongitud.setEditable(false);
     }//GEN-LAST:event_cmdllenadoautomaticoActionPerformed
 
     private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed
@@ -229,6 +234,7 @@ public class principal extends javax.swing.JFrame {
         cmdllenadoautomatico.setEnabled(false);
         cmdcalcular.setEnabled(false);
         cmdborrar.setEnabled(true);
+        txtlongitud.setEnabled(true);
         txtlongitud.setEditable(true);
     }//GEN-LAST:event_cmdborrarActionPerformed
 
@@ -271,7 +277,7 @@ public class principal extends javax.swing.JFrame {
                         }
 
                         if (v[i] > mayor) {
-                            mayor = v[1];
+                            mayor = v[i];
                         }
                     }
                     txtresultado.setText(mayor + "");
@@ -285,7 +291,7 @@ public class principal extends javax.swing.JFrame {
                         }
 
                         if (v[i] < menor) {
-                            menor = v[1];
+                            menor = v[i];
                         }
                     }
                     txtresultado.setText(menor + "");
@@ -293,12 +299,6 @@ public class principal extends javax.swing.JFrame {
             }
 
         }
-        cmdcrear.setEnabled(false);
-        cmdllenadomanual.setEnabled(false);
-        cmdllenadoautomatico.setEnabled(false);
-        cmdcalcular.setEnabled(false);
-        cmdborrar.setEnabled(true);
-        txtlongitud.setEnabled(true);
     }//GEN-LAST:event_cmdcalcularActionPerformed
 
     private void cmdllenadomanualKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdllenadomanualKeyTyped
