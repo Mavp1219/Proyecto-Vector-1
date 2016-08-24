@@ -176,7 +176,7 @@ public class principal extends javax.swing.JFrame {
             cmdborrar.setEnabled(true);
             txtlongitud.setEnabled(false);
             cmdcalcular.setEnabled(true);
-            
+
         }
 
 
