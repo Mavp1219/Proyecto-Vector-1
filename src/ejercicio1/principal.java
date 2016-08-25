@@ -5,6 +5,7 @@
  */
 package ejercicio1;
 
+import java.awt.ComponentOrientation;
 import javafx.scene.control.ComboBox;
 import javax.swing.JOptionPane;
 
@@ -49,9 +50,12 @@ public class principal extends javax.swing.JFrame {
         cmdllenadoautomatico = new javax.swing.JButton();
         cmdcalcular = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtresultado = new javax.swing.JTextPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtresultado = new javax.swing.JTextArea();
         cmdborrar = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtresultado2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -95,7 +99,7 @@ public class principal extends javax.swing.JFrame {
                 cmdcrearActionPerformed(evt);
             }
         });
-        jPanel3.add(cmdcrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 140, 30));
+        jPanel3.add(cmdcrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 40));
 
         cmdllenadomanual.setText("Llenado Manual");
         cmdllenadomanual.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +112,7 @@ public class principal extends javax.swing.JFrame {
                 cmdllenadomanualKeyTyped(evt);
             }
         });
-        jPanel3.add(cmdllenadomanual, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 140, 30));
+        jPanel3.add(cmdllenadomanual, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 140, 40));
 
         cmdllenadoautomatico.setText("Llenado automatico");
         cmdllenadoautomatico.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +120,7 @@ public class principal extends javax.swing.JFrame {
                 cmdllenadoautomaticoActionPerformed(evt);
             }
         });
-        jPanel3.add(cmdllenadoautomatico, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 140, 30));
+        jPanel3.add(cmdllenadoautomatico, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 140, 40));
 
         cmdcalcular.setText("Calcular");
         cmdcalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -124,19 +128,20 @@ public class principal extends javax.swing.JFrame {
                 cmdcalcularActionPerformed(evt);
             }
         });
-        jPanel3.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 140, 30));
+        jPanel3.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 140, 40));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 170, 180));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 180, 270));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtresultado.setEditable(false);
-        jScrollPane2.setViewportView(txtresultado);
+        txtresultado.setColumns(20);
+        txtresultado.setRows(5);
+        jScrollPane1.setViewportView(txtresultado);
 
-        jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 190, 90));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 220, 100));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 210, 130));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 250, 140));
 
         cmdborrar.setText("Borrar");
         cmdborrar.addActionListener(new java.awt.event.ActionListener() {
@@ -144,9 +149,20 @@ public class principal extends javax.swing.JFrame {
                 cmdborrarActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 100, 40));
+        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 100, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 350));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado Vectores:"));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtresultado2.setColumns(20);
+        txtresultado2.setRows(5);
+        jScrollPane2.setViewportView(txtresultado2);
+
+        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 220, 90));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 250, 120));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -175,7 +191,7 @@ public class principal extends javax.swing.JFrame {
             cmdllenadoautomatico.setEnabled(true);
             cmdborrar.setEnabled(true);
             txtlongitud.setEnabled(false);
-            cmdcalcular.setEnabled(true);
+            cmdcalcular.setEnabled(false);
 
         }
 
@@ -195,6 +211,9 @@ public class principal extends javax.swing.JFrame {
         for (int i = 0; i < v.length; i++) {
             n = Double.parseDouble(JOptionPane.showInputDialog(this, "Digite el elemento en la posición: " + i));
             v[i] = n;
+        } 
+        for (int i = 0; i <v.length; i++) {
+            txtresultado2.append(v[i] + "\n");
         }
         cmdcrear.setEnabled(false);
         cmdllenadomanual.setEnabled(false);
@@ -212,7 +231,9 @@ public class principal extends javax.swing.JFrame {
             n = (int) (Math.random() * 25 + 1);
             v[i] = n;
         }
-
+        for (int i = 0; i <v.length; i++) {
+            txtresultado2.append(v[i] + "\n");
+        }
         JOptionPane.showMessageDialog(this, "Vector creado correctamente");
 
         cmdcrear.setEnabled(false);
@@ -357,8 +378,11 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtlongitud;
-    private javax.swing.JTextPane txtresultado;
+    private javax.swing.JTextArea txtresultado;
+    private javax.swing.JTextArea txtresultado2;
     // End of variables declaration//GEN-END:variables
 }
