@@ -135,6 +135,7 @@ public class principal extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        txtresultado.setEditable(false);
         txtresultado.setColumns(20);
         txtresultado.setRows(5);
         jScrollPane1.setViewportView(txtresultado);
@@ -149,11 +150,12 @@ public class principal extends javax.swing.JFrame {
                 cmdborrarActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 100, 40));
+        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 110, 40));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado Vectores:"));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        txtresultado2.setEditable(false);
         txtresultado2.setColumns(20);
         txtresultado2.setRows(5);
         jScrollPane2.setViewportView(txtresultado2);
