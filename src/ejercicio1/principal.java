@@ -280,14 +280,14 @@ public class principal extends javax.swing.JFrame {
                     for (int i = 0; i < v.length; i++) {
                         sumatoria = v[i] + sumatoria;
                     }
-                    txtresultado.setText(sumatoria + "");
+                    txtresultado.setText("La sumatoria es: "+ sumatoria);
                     break;
 
                 case 1:
                     for (int i = 0; i < v.length; i++) {
                         productoria = v[i] * productoria;
                     }
-                    txtresultado.setText(productoria + "");
+                    txtresultado.setText("La productoria es: "+ productoria);
                     break;
 
                 case 2:
@@ -301,7 +301,7 @@ public class principal extends javax.swing.JFrame {
                             mayor = v[i];
                         }
                     }
-                    txtresultado.setText(mayor + "");
+                    txtresultado.setText("El mayor elemento del vector es: "+ mayor);
                     break;
 
                 case 3:
@@ -315,7 +315,7 @@ public class principal extends javax.swing.JFrame {
                             menor = v[i];
                         }
                     }
-                    txtresultado.setText(menor + "");
+                    txtresultado.setText("El menor elemento del vector es: "+ menor);
                     break;
             }
 
